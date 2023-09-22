@@ -15,7 +15,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
-
+    
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,14 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.eviron.get(
-    'SECRET_KEY', 'django-insecure-oxghy#*_xp3e!opm+45^qik*jt=gt-@rzxi3)k(_tp^f89mopt')
+SECRET_KEY = os.eviron.get('SECRET_KEY', 'django-insecure-oxghy#*_xp3e!opm+45^qik*jt=gt-@rzxi3)k(_tp^f89mopt')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get(
-    'hello--django-a49b65aa261c.herokuapp.com')]
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
@@ -89,7 +87,7 @@ WSGI_APPLICATION = 'hello_django.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('postgres://agmshllu:FCnc6XKCXa-Y1B80QOGpINF3W4O-1_Zi@flora.db.elephantsql.com/agmshllu'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
