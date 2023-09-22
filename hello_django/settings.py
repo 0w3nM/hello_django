@@ -30,7 +30,7 @@ SECRET_KEY = os.eviron.get('SECRET_KEY', 'django-insecure-oxghy#*_xp3e!opm+45^qi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = [os.environ.get('hello--django-a49b65aa261c.herokuapp.com')]
 
 
 # Application definition
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'hello_django.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('postgres://agmshllu:FCnc6XKCXa-Y1B80QOGpINF3W4O-1_Zi@flora.db.elephantsql.com/agmshllu'))
 }
 
 
