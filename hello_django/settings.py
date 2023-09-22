@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = [os.environ.get(
+    '8000-0w3nm-hello-django-u4nbk57t34.us2.codeanyapp.com')]
 
 
 # Application definition
